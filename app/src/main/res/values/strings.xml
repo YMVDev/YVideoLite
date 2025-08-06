@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">YVideoLite</string>
+    <string name="Play">Play</string>
+    <string name="Pause">Pause</string>
+    <string name="Next">Next</string>
+    <string name="Previous">Previous</string>
+    <string name="Desc_scale_video">Change aspect ratio</string>
+    <string name="Desc_shuffle_on">Disable shuffle mode</string>
+    <string name="Desc_shuffle_off">Enable shuffle mode</string>
+    <string name="Desc_repeat_off">Repeat none selected. Toggle repeat mode</string>
+    <string name="Desc_repeat_one">Repeat one selected. Toggle repeat mode</string>
+    <string name="Desc_repeat_all">Repeat all selected. Toggle repeat mode</string>
+    <string name="Desc_select_video">Open video file</string>
+    <string name="Desc_application_icon">Application icon</string>
+</resources>

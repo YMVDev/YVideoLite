@@ -1,0 +1,68 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+.idea
+/build
+/app/release
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Built application files
+*.apk
+*.apks
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+build/
+
+gradle.properties
+
+# Proguard output files
+dump.txt
+mapping.txt
+seeds.txt
+usage.txt
+
+# Android Studio Navigation editor backup files
+.navigation/
+
+# Android Auto generated files
+android_auto_*.json
+
+# Log Files
+*.log
+
+
+# Keystore files
+*.jks
+*.keystore
+
+
+# Media cache files
+.externalToolBuilders/
+
+# Captures of the Lint baseline when requested
+lint-baseline.xml
+
+# Firebase files
+google-services.json

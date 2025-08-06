@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YVideoLite</string>
+    <string name="Play">Воспроизвести</string>
+    <string name="Pause">Пауза</string>
+    <string name="Next">Следующее</string>
+    <string name="Previous">Предыдущее</string>
+    <string name="Desc_scale_video">Изменить соотношение сторон видео</string>
+    <string name="Desc_shuffle_on">Выключить режим перемешивания</string>
+    <string name="Desc_shuffle_off">Включить режим перемешивания</string>
+    <string name="Desc_repeat_off">Режим без повтора. Выберите режим повтора</string>
+    <string name="Desc_repeat_one">Режим повтор текущего. Выберите режим повтора</string>
+    <string name="Desc_repeat_all">Режим повторить все. Выберите режим повтора</string>
+    <string name="Desc_select_video">Выбрать видео</string>
+    <string name="Desc_application_icon">Иконка приложения</string>
+</resources>
