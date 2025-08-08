@@ -108,7 +108,7 @@ Thank you for your contributions!
 # YVideo Lite - Простой Видеоплеер (Compose/ExoPlayer)
 
 Это простое приложение для просмотра видео, созданное полностью с использованием Jetpack Compose и
-использующее ExoPlayer посредством `androidx.media3:media3-ui-compose`. В приложении нет рекламы.
+использующее ExoPlayer посредством библиотеки `androidx.media3:media3-ui-compose`. В приложении нет рекламы.
 
 **Мотивация:** Помимо основной цели - создать видеоплеер без отвлекающих факторов, этот проект
 представляет собой попытку реализации ExoPlayer исключительно в Jetpack Compose. Учитывая, что
