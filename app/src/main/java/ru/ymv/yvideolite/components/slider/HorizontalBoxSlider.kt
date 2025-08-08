@@ -29,6 +29,25 @@ import androidx.compose.ui.unit.dp
 import ru.ymv.yvideolite.utils.extensions.toDp
 import kotlin.math.roundToInt
 
+/**
+ * A horizontal slider with customizable appearance and behavior.
+ *
+ * @param value The current value of the slider within the specified [valueRange].
+ * @param onValueChange A callback invoked when the slider's value changes due to user interaction.
+ *   The new value is passed as a parameter.
+ * @param onValueChangeFinished A callback invoked when the user finishes interacting with the slider,
+ *   typically when they release the drag or tap.
+ * @param modifier Modifier to be applied to the slider.
+ * @param trackHeight The height of the slider track. Defaults to `4.dp`.
+ * @param thumbRadius The radius of the slider thumb. Defaults to `7.dp`.
+ * @param inactiveColor The color of the inactive portion of the slider track. Defaults to `Color.Gray.copy(alpha = 0.5f)`.
+ * @param activeColor The color of the active portion of the slider track and the step indicators (if enabled). Defaults to `Color.Red`.
+ * @param thumbColor The color of the slider thumb. Defaults to [activeColor].
+ * @param valueRange The range of values that the slider can represent. If `null`, defaults to `0f..1f`.
+ * @param stepSize If not `null`, the slider will snap to discrete values with the given step size. This enables step indicators.
+ * @param trackShape The shape of the slider track. Defaults to `RectangleShape`.
+ * @param thumbShape The shape of the slider thumb. Defaults to `CircleShape`.
+ */
 @Composable
 internal fun HorizontalBoxSlider(
     value: Float,
@@ -49,6 +68,13 @@ internal fun HorizontalBoxSlider(
     val range = valueRange ?: 0f..1f
     val steps = stepSize?.let { ((range.endInclusive - range.start) / it).toInt() }
 
+    /**
+     * Calculates the actual value based on the raw value (0f..1f).
+     * If [stepSize] is provided, it snaps the value to the nearest step.
+     *
+     * @param rawValue A value between 0f and 1f representing the position of the thumb.
+     * @return The actual value within the [valueRange], potentially snapped to a step.
+     */
     fun calculateValue(rawValue: Float): Float {
         val normalized = rawValue.coerceIn(0f, 1f)
         val scaledValue = range.start + normalized * (range.endInclusive - range.start)

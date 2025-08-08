@@ -15,6 +15,12 @@ import ru.ymv.yvideolite.ui.theme.YVideoTheme
 import ru.ymv.yvideolite.utils.extensions.SystemUiVisibility
 import ru.ymv.yvideolite.utils.extensions.toggleSystemUiVisibility
 
+/**
+ * The main activity for the YVideo player application.
+ *
+ * This activity hosts the main UI of the application, including the [YVideoScreen]. It also
+ * handles incoming intents for playing video files and passes them to the [YVideoViewModel].
+ */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private val viewModel: YVideoViewModel by viewModels()

@@ -20,6 +20,22 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.ui.compose.state.rememberPlayPauseButtonState
 import ru.ymv.yvideolite.R
 
+/**
+ * A button that toggles between play and pause states of an ExoPlayer [Player].
+ *
+ * This composable function creates an IconButton that, when clicked, toggles the playback state
+ * of the ExoPlayer between playing and paused. The button's icon changes dynamically based on the
+ * current playback state.
+ *
+ * @param player The ExoPlayer [Player] to control.
+ * @param modifier Modifier to be applied to the button.
+ * @param color The color of the icon when the button is enabled. Defaults to [Color.Unspecified].
+ * @param disabledColor The color of the icon when the button is disabled. Defaults to [Color.Unspecified].
+ * @param backgroundColor The background color of the button. Defaults to [Color.Transparent].
+ * @param iconSize The size of the icon. Defaults to 40.dp.
+ * @param iconPlay The [ImageVector] to use for the play icon. Defaults to [Icons.Default] PlayArrow.
+ * @param iconPause The [ImageVector] to use for the pause icon. Defaults to [Icons.Default] Pause.
+ */
 @OptIn(UnstableApi::class)
 @Composable
 internal fun PlayPauseButton(

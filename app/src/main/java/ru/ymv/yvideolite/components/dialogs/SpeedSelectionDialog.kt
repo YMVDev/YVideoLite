@@ -30,10 +30,34 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import ru.ymv.yvideolite.components.text.AutoSizeText
 import ru.ymv.yvideolite.components.slider.SliderSelectorRow
+import ru.ymv.yvideolite.components.text.AutoSizeText
 import ru.ymv.yvideolite.utils.composable.DialogWindowSetup
 
+/**
+ * A dialog for selecting the playback speed.
+ *
+ * This composable function displays a dialog that allows the user to select the playback speed
+ * of a media player. It includes a slider for fine-grained control and a set of buttons for
+ * quickly selecting predefined speed variants.
+ *
+ * @param onDismiss A callback invoked when the dialog is dismissed.
+ * @param onSelect A callback invoked when a speed is selected. The selected speed is passed as a parameter.
+ * @param gravity The gravity of the dialog window within its container. Defaults to [Gravity.CENTER].
+ * @param currentSpeed The currently selected playback speed.
+ * @param speedVariants A list of predefined speed variants to display as buttons.
+ * @param speedRange The range of possible playback speeds. Defaults to the range defined by the first and last elements of [speedVariants].
+ * @param modifier Modifier to be applied to the dialog.
+ * @param buttonsWidth The width of the speed variant buttons. Defaults to 77.dp.
+ * @param buttonsHeight The height of the speed variant buttons. Defaults to 55.dp.
+ * @param backgroundColor The background color of the dialog. Defaults to [Color.Unspecified].
+ * @param shape The shape of the dialog. Defaults to a rounded corner shape with a radius of 15.dp.
+ * @param textColor The color of the text. Defaults to [Color.Unspecified].
+ * @param selectedColor The color of the text for the selected speed. Defaults to [textColor].
+ * @param fontWeight The font weight of the text. Defaults to [FontWeight.Medium].
+ * @param selectedFontWeight The font weight of the text for the selected speed. Defaults to [FontWeight.ExtraBold].
+ * @param usePlatformDefaultWidth Whether to use the platform's default width for the dialog. Defaults to true.
+ */
 @Composable
 fun SpeedSelectionDialog(
     onDismiss: () -> Unit,

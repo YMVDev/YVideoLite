@@ -35,6 +35,15 @@ import ru.ymv.yvideolite.utils.composable.rememberPlayerLifecycleState
 import ru.ymv.yvideolite.utils.composable.rememberPlayingState
 import ru.ymv.yvideolite.utils.composable.rememberVideoSelector
 
+/**
+ * The main screen for the YVideo player application.
+ *
+ * This composable function displays the video player surface and controls, handles video loading,
+ * playback state, lifecycle events, and user interactions.
+ *
+ * @param player The ExoPlayer [Player] instance.
+ * @param onEvent A callback function to handle ExoPlayer events, such as adding a video URI.
+ */
 @OptIn(UnstableApi::class)
 @Composable
 fun YVideoScreen(

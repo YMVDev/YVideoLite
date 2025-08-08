@@ -17,14 +17,29 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import ru.ymv.yvideolite.components.text.AutoSizeText
 
+/**
+ * A circular button with a customizable border and text.
+ *
+ * This composable function creates a circular button with a distinct border and customizable text.
+ * It allows customization of the size, shape, border appearance, text color, and click action.
+ *
+ * @param text The text to display on the button.
+ * @param modifier Modifier to be applied to the button.
+ * @param size The size of the button (both width and height). Defaults to 200.dp.
+ * @param shape The shape of the button. Defaults to [CircleShape].
+ * @param borderWidth The width of the button's border. Defaults to 2.dp.
+ * @param borderColor The color of the button's border. Defaults to MaterialTheme.colorScheme.onSurface.
+ * @param textColor The color of the button's text. Defaults to [borderColor].
+ * @param onClick A callback invoked when the button is clicked.
+ */
 @Composable
-fun BigCircularButton(
+fun BorderedCircleButton(
     text: String,
     modifier: Modifier = Modifier,
     size: Dp = 200.dp,
     shape: Shape = CircleShape,
     borderWidth: Dp = 2.dp,
-    borderColor: Color = MaterialTheme.colorScheme.secondaryContainer,
+    borderColor: Color = MaterialTheme.colorScheme.onSurface,
     textColor: Color = borderColor,
     onClick: () -> Unit = {},
 ) {

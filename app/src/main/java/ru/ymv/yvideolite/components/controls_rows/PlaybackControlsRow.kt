@@ -13,6 +13,17 @@ import ru.ymv.yvideolite.components.buttons.GoNextButton
 import ru.ymv.yvideolite.components.buttons.GoPreviousButton
 import ru.ymv.yvideolite.components.buttons.PlayPauseButton
 
+/**
+ * A row of playback control buttons for an ExoPlayer [Player].
+ *
+ * This composable function creates a row of buttons that provide the core playback controls:
+ * previous, play/pause, and next.
+ *
+ * @param player The ExoPlayer [Player] to control.
+ * @param modifier Modifier to be applied to the row.
+ * @param iconSize The size of the icons in the buttons. Defaults to 40.dp.
+ * @param iconColor The color of the icons in the buttons. Defaults to [Color.White].
+ */
 @Composable
 internal fun PlaybackControlsRow(
     player: Player,

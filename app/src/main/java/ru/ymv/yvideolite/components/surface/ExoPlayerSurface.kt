@@ -16,6 +16,18 @@ import androidx.media3.ui.compose.modifiers.resizeWithContentScale
 import androidx.media3.ui.compose.state.rememberPresentationState
 import ru.ymv.yvideolite.utils.extensions.clickableWithoutRipple
 
+/**
+ * A Composable that displays an ExoPlayer [Player] on a surface.
+ *
+ * This composable function renders an ExoPlayer [Player] onto a surface, allowing you to display video
+ * content. It provides customization options for the content scale and click handling.
+ *
+ * @param player The ExoPlayer [Player] to display.
+ * @param modifier Modifier to be applied to the surface.
+ * @param contentScale The [ContentScale] to use for resizing the video content. Defaults to [ContentScale.Fit].
+ * @param onClick A callback invoked when the surface is clicked.
+ * @param overlayContent A composable function that allows you to draw content on top of the video surface.
+ */
 @OptIn(UnstableApi::class)
 @Composable
 fun ExoPlayerSurface(

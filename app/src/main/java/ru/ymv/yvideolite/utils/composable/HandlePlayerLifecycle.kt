@@ -12,6 +12,18 @@ import androidx.media3.common.Player
 import androidx.media3.common.util.Log
 import androidx.media3.common.util.UnstableApi
 
+/**
+ * Handles the ExoPlayer's playback state based on the lifecycle events of a [androidx.lifecycle.LifecycleOwner].
+ *
+ * This composable function manages the ExoPlayer's playback state (play/pause) in response to
+ * lifecycle events such as `ON_PAUSE` and `ON_RESUME`. It ensures that the player is paused when
+ * the associated component (e.g., Activity or Fragment) is paused and resumes playback when the
+ * component is resumed, if it was playing before.
+ *
+ * @param player The ExoPlayer [Player] to control.
+ * @param lifecycle The current [Lifecycle.Event] of the associated component.
+ * @param isPlaying A boolean indicating whether the player is currently playing.
+ */
 @OptIn(UnstableApi::class)
 @Composable
 fun HandlePlayerLifecycle(

@@ -15,6 +15,17 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
+/**
+ * ViewModel for the YVideo player screen.
+ *
+ * This ViewModel manages the ExoPlayer instance, video playlist, and playback state. It handles
+ * adding videos, saving the playlist to SavedStateHandle, and releasing the player when the
+ * ViewModel is cleared.
+ *
+ * @property savedStateHandle A handle to save and retrieve state across configuration changes.
+ * @property player The ExoPlayer instance to use for playback.  This is expected to be provided
+ *   by dependency injection.
+ */
 @HiltViewModel
 class YVideoViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
@@ -55,6 +66,11 @@ class YVideoViewModel @Inject constructor(
         player.playWhenReady = true
     }
 
+    /**
+     * Handles ExoPlayer events.
+     *
+     * @param event The ExoPlayerEvent to handle.
+     */
     fun onEvent(event: ExoPlayerEvent) {
         when (event) {
             is ExoPlayerEvent.AddUri -> if (!videoUris.value.contains(event.uri)) addVideoUri(event.uri)
@@ -68,6 +84,14 @@ class YVideoViewModel @Inject constructor(
     }
 }
 
+/**
+ * Sealed interface for ExoPlayer events.
+ */
 sealed interface ExoPlayerEvent {
+    /**
+     * Event to add a video URI to the playlist.
+     *
+     * @property uri The URI of the video to add.
+     */
     data class AddUri(val uri: Uri) : ExoPlayerEvent
 }

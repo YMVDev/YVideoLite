@@ -13,6 +13,18 @@ import androidx.compose.ui.graphics.Color
 import ru.ymv.yvideolite.utils.extensions.clickableWithoutRipple
 import ru.ymv.yvideolite.utils.extensions.toTimeString
 
+/**
+ * Displays the playback time, allowing the user to toggle between showing the elapsed time and the remaining time.
+ *
+ * This composable function displays the current playback time and the total duration of the media.
+ * It allows the user to tap the displayed time to toggle between showing the elapsed time and the
+ * remaining time.
+ *
+ * @param isUserSliding A boolean indicating whether the user is currently sliding the time bar.
+ * @param currentPosition The current playback position in milliseconds.
+ * @param slidingPosition The position to which the user is sliding the time bar (in milliseconds).
+ * @param duration The total duration of the media in milliseconds.
+ */
 @Composable
 internal fun PlaybackTime(
     isUserSliding: Boolean,

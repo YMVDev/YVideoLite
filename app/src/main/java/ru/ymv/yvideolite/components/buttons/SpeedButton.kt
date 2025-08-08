@@ -21,6 +21,18 @@ import androidx.media3.ui.compose.state.rememberPlaybackSpeedState
 import ru.ymv.yvideolite.components.dialogs.SpeedSelectionDialog
 import ru.ymv.yvideolite.components.text.AutoSizeText
 
+/**
+ * A button that opens a dialog to select the playback speed of an ExoPlayer [Player].
+ *
+ * This composable function creates a TextButton that, when clicked, displays a [SpeedSelectionDialog]
+ * allowing the user to choose a new playback speed for the ExoPlayer.
+ *
+ * @param player The ExoPlayer [Player] to control.
+ * @param modifier Modifier to be applied to the button.
+ * @param color The color of the text on the button. Defaults to [Color.Unspecified].
+ * @param selectedColor The color to use for the selected playback speed in the [SpeedSelectionDialog]. Defaults to the value of `color`.
+ * @param speedVariants A list of predefined playback speed options to display in the [SpeedSelectionDialog]. Defaults to `listOf(0.5f, 1f, 2f, 3f)`.
+ */
 @OptIn(UnstableApi::class)
 @Composable
 internal fun SpeedButton(

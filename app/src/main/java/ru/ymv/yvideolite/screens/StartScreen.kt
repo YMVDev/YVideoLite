@@ -17,8 +17,19 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import ru.ymv.yvideolite.R
-import ru.ymv.yvideolite.components.buttons.BigCircularButton
+import ru.ymv.yvideolite.components.buttons.BorderedCircleButton
 
+/**
+ * A starting screen with an icon and a button to select a video.
+ *
+ * This composable function displays a welcoming screen with an application icon and a button
+ * that prompts the user to select a video file. The layout adapts to portrait or landscape
+ * orientation.
+ *
+ * @param modifier [Modifier] to be applied to the layout.
+ * @param onClick A callback invoked when the select video button is clicked.  This callback
+ *  should trigger the video selection process.
+ */
 @Composable
 fun StartScreen(
     modifier: Modifier = Modifier,
@@ -43,8 +54,6 @@ fun StartScreen(
             Content(onClick = onClick)
         }
     }
-
-
 }
 
 @Composable
@@ -56,7 +65,7 @@ private fun Content(onClick: () -> Unit = {}) {
             .size(300.dp)
     )
     Spacer(modifier = Modifier.size(40.dp))
-    BigCircularButton(
+    BorderedCircleButton(
         text = stringResource(R.string.Desc_select_video),
         borderColor = Color.White,
         onClick = onClick
